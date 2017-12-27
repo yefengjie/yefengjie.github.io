@@ -504,9 +504,8 @@ img::-moz-selection {
 
   .panel-subtitle {
     font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    font-size: 0.6em;
+    font-size: 0.9em;
     font-weight: lighter;
-    letter-spacing: 3px;
     color: #CCCCCC;
     -webkit-font-smoothing: antialiased; }
 
@@ -716,7 +715,7 @@ img::-moz-selection {
     display: inline-block;
     margin-right: 0px;
     padding: 5px 5px 5px 5px;
-    font-size: .6em;
+    font-size: 1em;
     text-shadow: none;
     color: #BF1827;
   }
@@ -1055,7 +1054,7 @@ input[type="tel"]:-ms-input-placeholder {
   }
 
   .panel-subtitle {
-    font-size: 0.6em; }
+    font-size: 0.9em; }
 
   .panel-cover__description {
     margin: 0 10px;
