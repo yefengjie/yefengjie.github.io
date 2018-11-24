@@ -9,6 +9,7 @@ tag: Machine Learning
 >* 2、进入笔记本后，点击文件夹小图标进入根目录
 >* 3、新建download.ipynb文件
 >* 4、在download.ipynb中执行命令:    !tar cvfz notebook.tar.gz *
+>* 4.1、解决软链接问题,采用以下命令:     !tar -zcvphf a1.tar.gz *
 >* 5、执行完第4步后会在根目录生成一个notebook.tar.gz文件，选中并下载
 >* 6、解压见证奇迹
 
