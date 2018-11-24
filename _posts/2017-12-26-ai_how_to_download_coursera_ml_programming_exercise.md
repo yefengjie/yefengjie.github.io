@@ -2,7 +2,7 @@
 layout: post
 title: 如何下载Coursera Neural Network编程作业
 date: 2017-12-26
-tag: Machine Learning
+tag: AI
 ---
 
 >* 1、打开jupyter notebook,点击file open

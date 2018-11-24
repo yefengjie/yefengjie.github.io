@@ -6,7 +6,7 @@ tag: AI
 ---
 
 #### np.ravel_multi_index
-https://docs.scipy.org/doc/numpy/reference/generated/numpy.ravel_multi_index.html
+[np.ravel_multi_index](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ravel_multi_index.html)
 
 #### np.arange(a,b)\[::-1]
     >>> np.arange(2,5)
