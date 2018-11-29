@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Reinforcement Learning Note
-date: 2018-11-29
+date: 2018-11-30
 tag: AI
 ---
 
 #### Discounted Return
-0<=\Gamma<=1<br>
+0<=\gamma<=1<br>
 the agent will only care about if immediate rewards if \Gamma=0<br>
 the agent will care more about future rewards if /Gamma is large<br>
 
