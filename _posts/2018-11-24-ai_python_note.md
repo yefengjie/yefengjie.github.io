@@ -5,9 +5,9 @@ date: 2018-11-24
 tag: AI
 ---
 
-#### [np.ravel_multi_index](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ravel_multi_index.html)
+### [np.ravel_multi_index](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ravel_multi_index.html)
 
-#### np.arange(a,b)\[::-1]
+### np.arange(a,b)\[::-1]
     >>> np.arange(2,5)
     array([2, 3, 4])
     >>> np.arange(2,5)[::-1]
@@ -15,7 +15,7 @@ tag: AI
     >>> np.arange(2,5)[::1]
     array([2, 3, 4])
 
-#### np.prod
+### np.prod
     >>> np.prod((2,3))
     6
     >>> np.prod((2,3,4))
@@ -23,7 +23,7 @@ tag: AI
     >>> np.prod((2))
     2
 
-#### [collections.defaultdict](https://docs.python.org/2/library/collections.html#collections.defaultdict)
+### [collections.defaultdict](https://docs.python.org/2/library/collections.html#collections.defaultdict)
     import collections
     s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
     # defaultdict
@@ -70,7 +70,7 @@ tag: AI
     >>> list(d.items())
     [('i', 4), ('p', 2), ('s', 4), ('m', 1)]
 
-#### [collections.deque](https://docs.python.org/2/library/collections.html#deque-objects)
+### [collections.deque](https://docs.python.org/2/library/collections.html#deque-objects)
     >>> from collections import deque
     >>> d = deque('ghi')                 # make a new deque with three items
     >>> for elem in d:                   # iterate over the deque's elements
@@ -122,7 +122,7 @@ tag: AI
     >>> d
     deque(['c', 'b', 'a'])
 
-####[numpy.digitize](https://docs.scipy.org/doc/numpy-1.9.3/reference/generated/numpy.digitize.html)
+### [numpy.digitize](https://docs.scipy.org/doc/numpy-1.9.3/reference/generated/numpy.digitize.html)
 Return the indices of the bins to which each value in input array belongs.
 
     >>> x = np.array([0.2, 6.4, 3.0, 1.6])
