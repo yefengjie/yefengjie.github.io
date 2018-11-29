@@ -121,3 +121,26 @@ tag: AI
     >>> d.extendleft('abc')              # extendleft() reverses the input order
     >>> d
     deque(['c', 'b', 'a'])
+
+####[numpy.digitize](https://docs.scipy.org/doc/numpy-1.9.3/reference/generated/numpy.digitize.html)
+Return the indices of the bins to which each value in input array belongs.
+
+    >>> x = np.array([0.2, 6.4, 3.0, 1.6])
+    >>> bins = np.array([0.0, 1.0, 2.5, 4.0, 10.0])
+    >>> inds = np.digitize(x, bins)
+    >>> inds
+    array([1, 4, 3, 2])
+    >>> for n in range(x.size):
+    ...   print bins[inds[n]-1], "<=", x[n], "<", bins[inds[n]]
+    ...
+    0.0 <= 0.2 < 1.0
+    4.0 <= 6.4 < 10.0
+    2.5 <= 3.0 < 4.0
+    1.0 <= 1.6 < 2.5
+
+    >>> x = np.array([1.2, 10.0, 12.4, 15.5, 20.])
+    >>> bins = np.array([0,5,10,15,20])
+    >>> np.digitize(x,bins,right=True)
+    array([1, 2, 3, 4, 4])
+    >>> np.digitize(x,bins,right=False)
+    array([1, 3, 3, 4, 5])
