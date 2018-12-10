@@ -39,3 +39,9 @@ As part of this nanodegree, you will learn about many of the most recent, cuttin
 
 ### pre-processing steps for FashionMNIST data creation
 ![pre-processing steps for FashionMNIST data creation](https://yefengjie.github.io/images/res/277ac98f-91ae-4364-8884-0ace482845ea.jpg)
+
+### Best practice to place layers
+Best practice is to place any layers whose weights will change during the training process in __init__ and refer to them in the forward function; any layers or functions that always behave in the same way, such as a pre-defined activation function, may appear in the __init__ or in the forward function; it is mostly a matter of style and readability.
+
+### VGG-16 architecture
+![VGG-16 architecture](../../../images/res/322fd3e8-9f80-4a69-9b37-3c73e9947f59.jpg)
