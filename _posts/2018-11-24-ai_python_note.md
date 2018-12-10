@@ -144,3 +144,22 @@ Return the indices of the bins to which each value in input array belongs.
     array([1, 2, 3, 4, 4])
     >>> np.digitize(x,bins,right=False)
     array([1, 3, 3, 4, 5])
+
+### [numpy.random.uniform](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.uniform.html)
+
+    >>> np.random.uniform(0,1,2)
+    array([0.6574113 , 0.73053246])
+
+### [numpy.concatenate](https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html)
+
+    >>> a = np.array([[1, 2], [3, 4]])
+    >>> b = np.array([[5, 6]])
+    >>> np.concatenate((a, b), axis=0)
+    array([[1, 2],
+           [3, 4],
+           [5, 6]])
+    >>> np.concatenate((a, b.T), axis=1)
+    array([[1, 2, 5],
+           [3, 4, 6]])
+    >>> np.concatenate((a, b), axis=None)
+    array([1, 2, 3, 4, 5, 6])

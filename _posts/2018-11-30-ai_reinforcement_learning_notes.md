@@ -26,3 +26,16 @@ When implementing constant-𝛼 MC control, you must be careful to not set the v
 This is because very large values can keep the algorithm from converging to the optimal policy 𝛑∗.<br>
 However, you must also be careful to not set the value of 𝛼 too low, as this can result in an agent who learns too slowly.<br>
 The best value of 𝛼 for your implementation will greatly depend on your environment and is best gauged through trial-and-error.<br>
+
+### Reading Scientific Papers
+As part of this nanodegree, you will learn about many of the most recent, cutting-edge algorithms! Because of this, it will prove useful to learn how to read the original research papers. Here are some excellent tips. Some of the best advice is:
++ Take notes.
++ Read the paper multiple times. On the first couple readings, try to focus on the main points:
+    1. What kind of tasks are the authors using deep reinforcement learning (RL) to solve? What are the states, actions, and rewards?
+    2. What neural network architecture is used to approximate the action-value function?
+    3. How are experience replay and fixed Q-targets used to stabilize the learning algorithm?
+    4. What are the results?
++ Understanding the paper will probably take you longer than you think. Be patient, and reach out to the Udacity community with any questions.
+
+### pre-processing steps for FashionMNIST data creation
+![avatar](../images/res/277ac98f-91ae-4364-8884-0ace482845ea.jpg)
