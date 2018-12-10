@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如何下载Coursera Neural Network编程作业
+title: how to download coursera ml programming exercise
 date: 2017-12-26
 tag: AI
 ---
