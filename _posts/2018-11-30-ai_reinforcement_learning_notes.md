@@ -38,4 +38,4 @@ As part of this nanodegree, you will learn about many of the most recent, cuttin
 + Understanding the paper will probably take you longer than you think. Be patient, and reach out to the Udacity community with any questions.
 
 ### pre-processing steps for FashionMNIST data creation
-![avatar](../images/res/277ac98f-91ae-4364-8884-0ace482845ea.jpg)
+![pre-processing steps for FashionMNIST data creation](https://yefengjie.github.io/images/res/277ac98f-91ae-4364-8884-0ace482845ea.jpg)
