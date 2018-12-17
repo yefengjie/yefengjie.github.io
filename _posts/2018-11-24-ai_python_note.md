@@ -163,3 +163,4 @@ Return the indices of the bins to which each value in input array belongs.
            [3, 4, 6]])
     >>> np.concatenate((a, b), axis=None)
     array([1, 2, 3, 4, 5, 6])
+### [stack hstack vstack](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.hstack.html)

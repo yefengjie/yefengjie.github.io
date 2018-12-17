@@ -45,3 +45,10 @@ Best practice is to place any layers whose weights will change during the traini
 
 ### VGG-16 architecture
 ![VGG-16 architecture](../../../images/res/322fd3e8-9f80-4a69-9b37-3c73e9947f59.jpg)
+
+### Clasisification vs. Regression
+The loss function you should choose depends on the kind of CNN you are trying to create; cross entropy is generally good for classification tasks, but you might choose a different loss function for, say, a regression problem that tried to predict (x,y) locations for the center or edges of clothing items instead of class scores.
+
+### Cnn output size
+For any convolutional layer, the output feature maps will have the specified depth (a depth of 10 for 10 filters in a convolutional layer) and the dimensions of the produced feature maps (width/height) can be computed as the input image width/height, W, minus the filter size, F, divided by the stride, S, all + 1. The equation looks like: output_dim = (W-F)/S + 1, for an assumed padding size of 0. You can find a derivation of this formula, here.<br>
+For a pool layer with a size 2 and stride 2, the output dimension will be reduced by a factor of 2. Read the comments in the code below to see the output size for each layer.
