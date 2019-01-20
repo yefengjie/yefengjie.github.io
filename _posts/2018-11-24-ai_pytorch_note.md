@@ -78,3 +78,42 @@ params one is max value,params two is index
     >>> c=a('1','2','3','4','5')
     >>> c.state
     '1'
+### torch.size()
+    >>> x = torch.Tensor(5,3)
+    >>> print(x.size()[0])
+    5
+    >>> print(x.size()[1])
+    3
+### torch.view()
+    >>> x = torch.randn(8, 8)
+    >>> z = x.view(-1, 4)
+    >>> print(x.size(), z.size())
+    torch.Size([8, 8]) torch.Size([16, 4])
+### torch.add_()
+    >>> x=torch.rand(5,3)
+    >>> print(x)
+    tensor([[ 0.1871,  0.0850,  0.7820],
+            [ 0.6210,  0.4682,  0.1488],
+            [ 0.0206,  0.1116,  0.4006],
+            [ 0.3125,  0.1057,  0.8730],
+            [ 0.1193,  0.3052,  0.6189]])
+    >>> print(x.add_(1))
+    tensor([[ 1.1871,  1.0850,  1.7820],
+            [ 1.6210,  1.4682,  1.1488],
+            [ 1.0206,  1.1116,  1.4006],
+            [ 1.3125,  1.1057,  1.8730],
+            [ 1.1193,  1.3052,  1.6189]])
+### torch.view_as()
+    >>> a = torch.Tensor(2, 4)
+    >>> b = a.view_as(torch.Tensor(4, 2))
+    >>> print(a.size(),b.size())
+    torch.Size([2, 4]) torch.Size([4, 2])
+    >>> print(a)
+    tensor([[ 0.0000,  0.0000,  0.0000, -2.0000],
+            [ 0.0000,  0.0000,  0.0000,  0.0000]])
+    >>> print(b)
+    tensor([[ 0.0000,  0.0000],
+            [ 0.0000, -2.0000],
+            [ 0.0000,  0.0000],
+            [ 0.0000,  0.0000]])
+
