@@ -90,6 +90,8 @@ params one is max value,params two is index
     >>> print(x.size(), z.size())
     torch.Size([8, 8]) torch.Size([16, 4])
 ### torch.add_()
+Returns a new tensor with the same data as the self tensor but of a different shape.
+
     >>> x=torch.rand(5,3)
     >>> print(x)
     tensor([[ 0.1871,  0.0850,  0.7820],
@@ -104,6 +106,8 @@ params one is max value,params two is index
             [ 1.3125,  1.1057,  1.8730],
             [ 1.1193,  1.3052,  1.6189]])
 ### torch.view_as()
+View this tensor as the same size as other. self.view_as(other) is equivalent to self.view(other.size()).
+
     >>> a = torch.Tensor(2, 4)
     >>> b = a.view_as(torch.Tensor(4, 2))
     >>> print(a.size(),b.size())
