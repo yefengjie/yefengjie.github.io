@@ -68,3 +68,34 @@ In this optional lesson, you'll learn how to apply deep reinforcement learning t
 - Read the most famous [blog post](http://karpathy.github.io/2016/05/31/rl/) on policy gradient methods.
 - Implement a policy gradient method to win at Pong in this [Medium post](https://medium.com/@dhruvp/how-to-write-a-neural-network-to-play-pong-from-scratch-956b57d4f6e0).
 - Learn more about [evolution strategies](https://blog.openai.com/evolution-strategies/) from OpenAI.
+### Value-based Methods vs Policy-based Methods
+- With value-based methods, the agent uses its experience with the environment to maintain an estimate of the optimal action-value function. The optimal policy is then obtained from the optimal action-value function estimate.
+- Policy-based methods directly learn the optimal policy, without having to maintain a separate value function estimate.
+### Policy Function Approximation
+- In deep reinforcement learning, it is common to represent the policy with a neural network.
+    - This network takes the environment state as input.
+    - If the environment has discrete actions, the output layer has a node for each possible action and contains the probability that the agent should select each possible action.
+- The weights in this neural network are initially set to random values. Then, the agent updates the weights as it interacts with (and learns more about) the environment.
+### More on the Policy
+- Policy-based methods can learn either stochastic or deterministic policies, and they can be used to solve environments with either finite or continuous action spaces.
+### Hill Climbing
+- Hill climbing is an iterative algorithm that can be used to find the weights \thetaθ for an optimal policy.
+- At each iteration,
+    - We slightly perturb the values of the current best estimate for the weights \theta_{best}θ best, to yield a new set of weights.
+    - These new weights are then used to collect an episode. If the new weights \theta_{new}θ new resulted in higher return than the old weights, then we set \theta_{best} \leftarrow \theta_{new}θ best ←θ new.
+### Beyond Hill Climbing
+- Steepest ascent hill climbing is a variation of hill climbing that chooses a small number of neighboring policies at each iteration and chooses the best among them.
+- Simulated annealing uses a pre-defined schedule to control how the policy space is explored, and gradually reduces the search radius as we get closer to the optimal solution.
+- Adaptive noise scaling decreases the search radius with each iteration when a new best policy is found, and otherwise increases the search radius.
+### More Black-Box Optimization
+- The cross-entropy method iteratively suggests a small number of neighboring policies, and uses a small percentage of the best performing policies to calculate a new estimate.
+- The evolution strategies technique considers the return corresponding to each candidate policy. The policy estimate at the next iteration is a weighted sum of all of the candidate policies, where policies that got higher return are given higher weight.
+### Why Policy-Based Methods?
+There are three reasons why we consider policy-based methods:
+- Simplicity: Policy-based methods directly get to the problem at hand (estimating the optimal policy), without having to store a bunch of additional data (i.e., the action values) that may not be useful.
+- Stochastic policies: Unlike value-based methods, policy-based methods can learn true stochastic policies.
+- Continuous action spaces: Policy-based methods are well-suited for continuous action spaces.
+### Policy Gradient Methods Why We use Trajectories?
+You may be wondering: why are we using trajectories instead of episodes? The answer is that maximizing expected return over trajectories (instead of episodes) lets us search for optimal policies for both episodic and continuing tasks!
+
+That said, for many episodic tasks, it often makes sense to just use the full episode. In particular, for the case of the video game example described in the lessons, reward is only delivered at the end of the episode. In this case, in order to estimate the expected return, the trajectory should correspond to the full episode; otherwise, we don't have enough reward information to meaningfully estimate the expected return.
