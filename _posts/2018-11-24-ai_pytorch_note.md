@@ -120,4 +120,7 @@ View this tensor as the same size as other. self.view_as(other) is equivalent to
             [ 0.0000, -2.0000],
             [ 0.0000,  0.0000],
             [ 0.0000,  0.0000]])
+### torch.Tensor.cpu()
+Returns a copy of this object in CPU memory.
 
+If this object is already in CPU memory and on the correct device, then no copy is performed and the original object is returned.
