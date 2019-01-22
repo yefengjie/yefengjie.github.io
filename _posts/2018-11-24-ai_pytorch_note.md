@@ -124,3 +124,19 @@ View this tensor as the same size as other. self.view_as(other) is equivalent to
 Returns a copy of this object in CPU memory.
 
 If this object is already in CPU memory and on the correct device, then no copy is performed and the original object is returned.
+### [Torch.distributions.Categorical()](https://pytorch.org/docs/stable/distributions.html)
+    >>> from torch.distributions import Categorical
+    >>> m = Categorical(torch.tensor([ 0.25, 0.25, 0.25, 0.25 ]))
+    >>> m.sample()
+    tensor(3)
+### torch.cat()
+    >>> A=torch.from_numpy(np.array([2,3]))
+    >>> B=torch.from_numpy(np.array([6,7]))
+    >>> A
+    tensor([ 2,  3])
+    >>> B
+    tensor([ 6,  7])
+    >>> torch.cat((A,B))
+    tensor([ 2,  3,  6,  7])
+    >>> torch.cat((A,B)).sum()
+    tensor(18)

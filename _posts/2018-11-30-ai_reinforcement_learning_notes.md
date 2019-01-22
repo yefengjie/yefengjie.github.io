@@ -99,3 +99,25 @@ There are three reasons why we consider policy-based methods:
 You may be wondering: why are we using trajectories instead of episodes? The answer is that maximizing expected return over trajectories (instead of episodes) lets us search for optimal policies for both episodic and continuing tasks!
 
 That said, for many episodic tasks, it often makes sense to just use the full episode. In particular, for the case of the video game example described in the lessons, reward is only delivered at the end of the episode. In this case, in order to estimate the expected return, the trajectory should correspond to the full episode; otherwise, we don't have enough reward information to meaningfully estimate the expected return.
+### An overview of gradient descent optimization algorithms
+[optimizing gradient descent](http://ruder.io/optimizing-gradient-descent/)
+### Likelihood ratio policy gradient
+etc...
+### [evolution-strategies](https://blog.openai.com/evolution-strategies/)
+We’ve discovered that evolution strategies (ES), an optimization technique that’s been known for decades, rivals the performance of standard reinforcement learning (RL) techniques on modern RL benchmarks (e.g. Atari/MuJoCo), while overcoming many of RL’s inconveniences
+### What are Policy Gradient Methods?
+- Policy-based methods are a class of algorithms that search directly for the optimal policy, without simultaneously maintaining value function estimates.
+- Policy gradient methods are a subclass of policy-based methods that estimate the weights of an optimal policy through gradient ascent.
+- In this lesson, we represent the policy with a neural network, where our goal is to find the weights \thetaθ of the network that maximize expected return.
+### The Big Picture Of Policy Gradient Method
+The policy gradient method will iteratively amend the policy network weights to:
+- make (state, action) pairs that resulted in positive return more likely, and
+- make (state, action) pairs that resulted in negative return less likely.
+### Policy Gradient Method Problem Setup
+- A trajectory τ is a state-action sequence s_0, a_0, s, s_H, a_H, s_{H+1}
+- In this lesson, we will use the notation R(τ) to refer to the return corresponding to trajectory τ
+- Our goal is to find the weights θ of the policy network to maximize the expected return![Policy_Gradient_Methods_Expected_Return](../../../images/res/Policy_Gradient_Methods_Expected_Return.png)
+### Policy Gradient Reinforce
+![Policy Gradient Reinforce](../../../images/res/REINFORCE_pseudocode.png)
+### Policy Gradient Derivation
+![Policy Gradient Derivation](../../../images/res/REINFORCE_Derivation.png)
