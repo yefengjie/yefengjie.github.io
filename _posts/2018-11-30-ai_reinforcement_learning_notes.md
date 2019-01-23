@@ -121,3 +121,62 @@ The policy gradient method will iteratively amend the policy network weights to:
 ![Policy Gradient Reinforce](../../../images/res/REINFORCE_pseudocode.png)
 ### Policy Gradient Derivation
 ![Policy Gradient Derivation](../../../images/res/REINFORCE_Derivation.png)
+### Proximal Policy Optimization (PPO)
+[link](https://arxiv.org/abs/1707.06347)
+### Notes on Gradient Modification
+Notes on Gradient Modification
+You might wonder, why is it okay to just change our gradient? Wouldn't that change our original goal of maximizing the expected reward?
+
+It turns out that mathematically, ignoring past rewards might change the gradient for each specific trajectory, but it doesn't change the averaged gradient. So even though the gradient is different during training, on average we are still maximizing the average reward. In fact, the resultant gradient is less noisy, so training using future reward should speed things up!
+### Policy Gradient Quiz Equation
+![Policy Gradient Derivation](../../../images/res/policy_gradient_quiz1.jpg)
+![Policy Gradient Derivation](../../../images/res/policy_gradient_quiz2.jpg)
+For a better formatted version of the explanation below, please check [explanation](https://www.overleaf.com/read/vtxxxcntnqdg)
+
+Here is the raw text:
+
+Based on the quiz introduction, we have the following setup (we only have three steps in each trajectory):
+
+\[ \tau = (s_1, a_1, s_2, a_2, s_3, a_3) \]
+
+\[ R = r_1 + r_2 + r_3\]
+
+\[ \pi(1|s_t) = \theta \]
+
+\[ \pi(0|s_t) = 1 - \theta \]
+
+From the "Credit Assignment" video, you've learned that:
+
+\[ R_{t}^{future} = \sum_{t=t}^{H} r_t \]
+
+This means the future reward at time $t$ only counts the sum of rewards after $t$ but not before. So for Q1, the future rewards are calculated as:
+
+\[ R_{1}^{future} = r_1 + r_2 + r_3 = 1 + 0 + 1 = 2 \]
+
+\[ R_{2}^{future} = r_2 + r_3 = 0 + 1 = 1 \]
+
+\[ R_{3}^{future} = r_3 = 1 \]
+
+As for Q2, we first calculate the derivatives of policy functions:
+
+\[ \nabla_\theta \pi(1|s_t) = 1 \]
+
+\[ \nabla_\theta \pi(0|s_t) = -1 \]
+
+Then we can calculate:
+
+\[ \nabla_\theta log \pi(1|s_t) = \frac{\nabla_\theta \pi(1|s_t)}{\pi(1|s_t)} = \frac{1}{\pi(1|s_t)} = 2 \]
+
+\[ \nabla_\theta log \pi(0|s_t) = \frac{\nabla_\theta \pi(0|s_t)}{\pi(0|s_t)} = \frac{-1} {\pi(1|s_t)} = -2 \]
+
+Lastly we can put all these together to calculate the gradient. We have the future rewards as below:
+
+\[ R_{1}^{future} = r_1 + r_2 + r_3 = 0 + 0 + 1 = 1 \]
+
+\[ R_{2}^{future} = r_2 + r_3 = 0 + 1 = 1 \]
+
+\[ R_{3}^{future} = r_3 = 1 \]
+
+Thus,
+
+\[ g = \sum_{t} R_{t}^{future} \nabla_\theta log \pi_\theta (a_t | s_t) = 2 * 1 + (-2) * 1 + (-2) * 1 = -2\]
