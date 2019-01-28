@@ -157,4 +157,4 @@ It turns out that mathematically, ignoring past rewards might change the gradien
 ![Policy Gradient Derivation](../../../images/res/policy_gradient_quiz1.jpg)
 ![Policy Gradient Derivation](../../../images/res/policy_gradient_quiz2.jpg)
 For a better formatted version of the explanation below, please check [explanation](https://www.overleaf.com/read/vtxxxcntnqdg)
-![Policy Gradient Derivation](../../../images/res/MathExpressions.jpg)
+![Policy Gradient Derivation](../../../images/res/policy_gradient_quiz3.jpg)
