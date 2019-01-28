@@ -166,3 +166,12 @@ For a better formatted version of the explanation below, please check [explanati
 - It may be beneficial to train multiple epochs, say first using a small tmax=200 with 500 episodes, and then train again with tmax = 400 with 500 episodes, and then finally with a even larger tmax.
 - Remember to save your policy after training!
 - for a challenge, try the 'Pong-v4' environment, this includes random frameskips and takes longer to train.
+### Importance Sampling
+![Importance Sampling](../../../images/res/Importance_Sampling.jpg)
+### The Surrogate Function
+![The Surrogate Function](../../../images/res/The_Surrogate_Function.jpg)
+### Clipping Policy Updates
+![Clipping_Policy_Updates](../../../images/res/Clipping_Policy_Updates.jpg)
+### PPO Summary
+[more detail](https://arxiv.org/abs/1707.06347)
+![PPO Summary](../../../images/res/PPO_Summary.jpg)
